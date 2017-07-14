@@ -375,7 +375,7 @@ export default {
 
 <template>
 <span class="time-picker">
-  <input class="'display-time ' + inputClass" :id="id" v-model="displayTime" @click.stop="toggleDropdown" type="text" readonly />
+  <input class="display-time" v-bind:class = 'inputClass' :id="id" v-model="displayTime" @click.stop="toggleDropdown" type="text" readonly />
   <span class="clear-btn" v-if="!hideClearButton" v-show="!showDropdown && showClearBtn" @click.stop="clearTime">&times;</span>
   <div class="time-picker-overlay" v-if="showDropdown" @click.stop="toggleDropdown"></div>
   <div class="dropdown" v-show="showDropdown">
